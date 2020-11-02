@@ -1,7 +1,6 @@
 import React from 'react';
 import SortControl from "./SortControl";
 import Paginator from "./Paginator";
-import TopPanel from "../TopPanel";
 
 class ControlPanel extends React.Component {
   render() {

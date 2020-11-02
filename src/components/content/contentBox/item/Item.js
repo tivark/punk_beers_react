@@ -10,11 +10,13 @@ class Item extends React.Component {
   addToFavorite(){
     localStorage.setItem(this.props.item.id, this.props.item.name);
     this.setState({favorite:true});
+    this.props.contentRender();
   }
 
   removeFromFavorite(){
     localStorage.removeItem(this.props.item.id);
     this.setState({favorite:false});
+    this.props.contentRender();
   }
 
   render() {

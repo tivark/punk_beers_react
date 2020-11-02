@@ -7,8 +7,8 @@ class Content extends React.Component {
   render() {
     return (
       <div className="content-body">
-        <Items items={this.props.items}/>
-        <FavoriteItems />
+        <Items items={this.props.items} contentRender={this.forceUpdate.bind(this)}/>
+        <FavoriteItems contentRender={this.forceUpdate.bind(this)}/>
       </div>
     );
   }
