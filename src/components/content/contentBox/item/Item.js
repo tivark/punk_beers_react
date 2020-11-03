@@ -20,20 +20,22 @@ class Item extends React.Component {
   }
 
   render() {
+    const {item} = this.props;
+
     let button;
-    if (this.props.item.id in localStorage){
+    if (item.id in localStorage){
       button = <RemoveButton handler={this.removeFromFavorite.bind(this)} />
     } else {
       button = <FavoriteButton handler={this.addToFavorite.bind(this)}/>
     }
     return (
       <div className="beer-item">
-        <ItemImage imageUrl={this.props.item['image_url']} />
-        <div className="beer-item__name">{this.props.item.name}</div>
-        <div className="beer-item__contributor">{this.props.item.contribution}</div>
-        <ItemAttribute type="ABV" value={this.props.item.abv} />
-        <ItemAttribute type="IBU" value={this.props.item.ibu}  />
-        <ItemDescription text={this.props.item.description}/>
+        <ItemImage imageUrl={item['image_url']} />
+        <div className="beer-item__name">{item.name}</div>
+        <div className="beer-item__contributor">{item.contribution}</div>
+        <ItemAttribute type="ABV" value={item.abv} />
+        <ItemAttribute type="IBU" value={item.ibu}  />
+        <ItemDescription text={item.description}/>
         {button}
       </div>
     )

@@ -331,14 +331,13 @@ html {
     height: 100%;
     background-color: rgba(0,0,0, .5);
     transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .feedback-form-layer .form-wrapper {
     position: relative;
-    left: 50%;
-    top: 25%;
-    transform: translateX(-50%) scale(.1);
-    transition: all .2s;
     width: 450px;
     background-color: #ffffff;
     border-radius: 3px;
@@ -361,6 +360,12 @@ html {
     padding: 10px 20px 0;
     display: flex;
     flex-direction: column;
+}
+.valid_field{
+    border-color: #6200ee !important;
+}
+.invalid_field{
+    border-color: #b00020 !important;
 }
 
 .form__buttons-wrapper {
